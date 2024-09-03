@@ -3,3 +3,4 @@ https://runweek.github.io/Blogs/2024/08/29/ubuntu22-04%E5%AE%89%E8%A3%85%E9%85%8
 https://runweek.github.io/Blogs
 https://runweek.github.io/Blogs/categories/Linux/
 https://runweek.github.io/Blogs/categories/Linux/hadoop/
+https://runweek.github.io/Blogs/categories/Linux/NPB-benchmark/

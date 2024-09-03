@@ -11,6 +11,14 @@
     <content type="html"><![CDATA[<h1 id="下载解压NPB"><a href="#下载解压NPB" class="headerlink" title="下载解压NPB"></a>下载解压NPB</h1><ol><li>wget <a href="https://www.nas.nasa.gov/assets/npb/NPB3.4.3.tar.gz">https://www.nas.nasa.gov/assets/npb/NPB3.4.3.tar.gz</a></li><li>tar -xvf NPB3.4.3.tar.gz</li></ol><h1 id="编译NPB-MPI"><a href="#编译NPB-MPI" class="headerlink" title="编译NPB-MPI"></a>编译NPB-MPI</h1><ol><li>cd NPB3.4.3&#x2F;NPB3.4-MPI</li><li>cp config&#x2F;make.def.template config&#x2F;make.def</li><li>make BT CLASS&#x3D;A</li><li>.&#x2F;bin&#x2F;bt.A.x</li></ol><h1 id="编译NPB-OMP"><a href="#编译NPB-OMP" class="headerlink" title="编译NPB-OMP"></a>编译NPB-OMP</h1><ol><li>cd NPB3.4.3&#x2F;NPB3.4-MPI</li><li>cp config&#x2F;make.def.template config&#x2F;make.def</li><li>设置线程数 export OMP_NUM_THREADS&#x3D;64</li><li>make BT CLASS&#x3D;A</li><li>.&#x2F;bin&#x2F;bt.A.x</li></ol>]]></content>
     
     
+    <categories>
+      
+      <category>Linux</category>
+      
+      <category>NPB benchmark</category>
+      
+    </categories>
+    
     
   </entry>
   
