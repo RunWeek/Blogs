@@ -27,7 +27,7 @@
 <meta property="og:description" content="准备工作安装javasudo apt install default-jdk  安装hadoop从官方网站下载hadoop wget https:&#x2F;&#x2F;dlcdn.apache.org&#x2F;hadoop&#x2F;common&#x2F;hadoop-3.4.0&#x2F;hadoop-3.4.0.tar.gz 解压tar -xvf hadoop-3.4.0.tar.gz 重命名(不重命名也行)mv hadoop-3.4.0 had">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-08-29T10:51:39.000Z">
-<meta property="article:modified_time" content="2024-09-04T01:37:19.632Z">
+<meta property="article:modified_time" content="2024-09-04T03:08:31.140Z">
 <meta property="article:author" content="amagicowboy">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -226,7 +226,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          323 字
+          405 字
         
       </span>
     
@@ -237,7 +237,7 @@
         
         
         
-          3 分钟
+          4 分钟
         
       </span>
     
@@ -298,7 +298,13 @@
 <p>初始化namenode节点数据<br><code>./bin/hdfs namenode  -format</code></p>
 <p>启动hadoop服务<br><code>./sbin/start-dfs.sh</code></p>
 <p>jps查看正在运行Java程序</p>
+<h1 id="ERROR-JAVA-HOME-is-not-set-and-could-not-be-found"><a href="#ERROR-JAVA-HOME-is-not-set-and-could-not-be-found" class="headerlink" title="ERROR: JAVA_HOME is not set and could not be found."></a>ERROR: JAVA_HOME is not set and could not be found.</h1><p>没有设置JAVA_HOME环境变量,找到java的地址,再设置环境变量</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-built_in">export</span> <span class="hljs-attribute">JAVA_HOME</span>=/usr/lib/jvm/java-1.8.0-openjdk-amd64<br></code></pre></td></tr></table></figure>
 
+<h1 id="ERROR-localhost-Permission-denied-publickey-password"><a href="#ERROR-localhost-Permission-denied-publickey-password" class="headerlink" title="ERROR:localhost: Permission denied (publickey,password)."></a>ERROR:localhost: Permission denied (publickey,password).</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cat</span> ~/.ssh/id_rsa.pub &gt; ~/.ssh/authorized_keys<br></code></pre></td></tr></table></figure>
+
+<h1 id="ERROR-sbin-start-dfs-sh-localhost-ERROR-JAVA-HOME-is-not-set-and-could-not-be-found"><a href="#ERROR-sbin-start-dfs-sh-localhost-ERROR-JAVA-HOME-is-not-set-and-could-not-be-found" class="headerlink" title="ERROR: .&#x2F;sbin&#x2F;start-dfs.sh localhost: ERROR: JAVA_HOME is not set and could not be found."></a>ERROR: .&#x2F;sbin&#x2F;start-dfs.sh localhost: ERROR: JAVA_HOME is not set and could not be found.</h1><p>编辑vim etc&#x2F;hadoop&#x2F;hadoop-env.sh,修改JAVA_HOME为绝对路径</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">vim</span> etc/hadoop/hadoop-env.sh<br><span class="hljs-attribute">JAVA_HOME</span>=/usr/lib/jvm/java-<span class="hljs-number">1</span>.<span class="hljs-number">8</span>.<span class="hljs-number">0</span>-openjdk-amd64<br></code></pre></td></tr></table></figure>
                 
               </div>
             
