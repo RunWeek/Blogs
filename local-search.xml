@@ -4,6 +4,29 @@
   
   
   <entry>
+    <title>YCSB测试cassandra</title>
+    <link href="/Blogs/2024/11/26/YCSB%E6%B5%8B%E8%AF%95cassandra/"/>
+    <url>/Blogs/2024/11/26/YCSB%E6%B5%8B%E8%AF%95cassandra/</url>
+    
+    <content type="html"><![CDATA[<h1 id="docker-运行Cassandra"><a href="#docker-运行Cassandra" class="headerlink" title="docker 运行Cassandra"></a>docker 运行Cassandra</h1><figure class="highlight handlebars"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs handlebars"><span class="language-xml">docker run --name my_cassandra -d cassandra</span><br><span class="language-xml"></span><br><span class="language-xml">查看运行状态</span><br><span class="language-xml">docker ps </span><br><span class="language-xml"></span><br><span class="language-xml">查看cassandra IP</span><br><span class="language-xml">docker inspect -f &#x27;</span><span class="hljs-template-variable">&#123;&#123;<span class="hljs-name">range</span> .NetworkSettings.Networks&#125;&#125;</span><span class="hljs-template-variable">&#123;&#123;<span class="hljs-name">.IPAddress</span>&#125;&#125;</span><span class="hljs-template-variable">&#123;&#123;<span class="hljs-name">end</span>&#125;&#125;</span><span class="language-xml">&#x27; my_cassandra </span><br></code></pre></td></tr></table></figure><h1 id="Cassandra创建KEYSPACE和TABLE"><a href="#Cassandra创建KEYSPACE和TABLE" class="headerlink" title="Cassandra创建KEYSPACE和TABLE"></a>Cassandra创建KEYSPACE和TABLE</h1><p>必须创建KEYSPACE和TABLE,不然ycsb load和run return都是error</p><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs pgsql">创建KEYSPACE<br>docker exec -it my_cassandra /bin/bash<br><span class="hljs-keyword">create</span> keyspace ycsb<br><br>创建<span class="hljs-keyword">TABLE</span><br>USE ycsb;<br><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> usertable (<br>    y_id <span class="hljs-type">varchar</span> <span class="hljs-keyword">primary key</span>,<br>    field0 <span class="hljs-type">varchar</span>,<br>    field1 <span class="hljs-type">varchar</span>,<br>    field2 <span class="hljs-type">varchar</span>,<br>    field3 <span class="hljs-type">varchar</span>,<br>    field4 <span class="hljs-type">varchar</span>,<br>    field5 <span class="hljs-type">varchar</span>,<br>    field6 <span class="hljs-type">varchar</span>,<br>    field7 <span class="hljs-type">varchar</span>,<br>    field8 <span class="hljs-type">varchar</span>,<br>    field9 <span class="hljs-type">varchar</span>);<br></code></pre></td></tr></table></figure><h1 id="YCSB"><a href="#YCSB" class="headerlink" title="YCSB"></a>YCSB</h1><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs routeros">load YCSB<br>python2 ./bin/ycsb load cassandra-cql -s -P workloads/workloada -p <span class="hljs-attribute">hosts</span>=172.17.0.2<br><br><span class="hljs-built_in">run</span> YCSB<br>python2 ./bin/ycsb <span class="hljs-built_in">run</span> cassandra-cql -s -P workloads/workloada -p <span class="hljs-attribute">hosts</span>=172.17.0.2<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Linux</category>
+      
+      <category>Cassandra</category>
+      
+      <category>YCSB</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>YCSB测试memcached</title>
     <link href="/Blogs/2024/11/12/YCSB%E6%B5%8B%E8%AF%95memcached/"/>
     <url>/Blogs/2024/11/12/YCSB%E6%B5%8B%E8%AF%95memcached/</url>

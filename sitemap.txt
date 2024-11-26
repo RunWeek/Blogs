@@ -1,3 +1,4 @@
+https://runweek.github.io/Blogs/2024/11/26/YCSB%E6%B5%8B%E8%AF%95cassandra/
 https://runweek.github.io/Blogs/2024/11/12/YCSB%E6%B5%8B%E8%AF%95memcached/
 https://runweek.github.io/Blogs/2024/08/29/ubuntu22-04%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEhadoop/
 https://runweek.github.io/Blogs/2024/09/03/Ubuntu22-04%E7%BC%96%E8%AF%91NPB/
@@ -7,3 +8,5 @@ https://runweek.github.io/Blogs/categories/Linux/hadoop/
 https://runweek.github.io/Blogs/categories/Linux/NPB-benchmark/
 https://runweek.github.io/Blogs/categories/Linux/Memcached/
 https://runweek.github.io/Blogs/categories/Linux/Memcached/YCSB/
+https://runweek.github.io/Blogs/categories/Linux/Cassandra/
+https://runweek.github.io/Blogs/categories/Linux/Cassandra/YCSB/

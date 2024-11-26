@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://runweek.github.io/Blogs/2024/11/26/YCSB%E6%B5%8B%E8%AF%95cassandra/</loc>
+    
+    <lastmod>2024-11-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://runweek.github.io/Blogs/2024/11/12/YCSB%E6%B5%8B%E8%AF%95memcached/</loc>
     
     <lastmod>2024-11-12</lastmod>
@@ -31,7 +40,7 @@
 
   <url>
     <loc>https://runweek.github.io/Blogs</loc>
-    <lastmod>2024-11-12</lastmod>
+    <lastmod>2024-11-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -41,35 +50,49 @@
   
   <url>
     <loc>https://runweek.github.io/Blogs/categories/Linux/</loc>
-    <lastmod>2024-11-12</lastmod>
+    <lastmod>2024-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://runweek.github.io/Blogs/categories/Linux/hadoop/</loc>
-    <lastmod>2024-11-12</lastmod>
+    <lastmod>2024-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://runweek.github.io/Blogs/categories/Linux/NPB-benchmark/</loc>
-    <lastmod>2024-11-12</lastmod>
+    <lastmod>2024-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://runweek.github.io/Blogs/categories/Linux/Memcached/</loc>
-    <lastmod>2024-11-12</lastmod>
+    <lastmod>2024-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://runweek.github.io/Blogs/categories/Linux/Memcached/YCSB/</loc>
-    <lastmod>2024-11-12</lastmod>
+    <lastmod>2024-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://runweek.github.io/Blogs/categories/Linux/Cassandra/</loc>
+    <lastmod>2024-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://runweek.github.io/Blogs/categories/Linux/Cassandra/YCSB/</loc>
+    <lastmod>2024-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
